@@ -11,12 +11,12 @@
   <div class="row">
     <% @todos.each do |task| %>
       <div class="col">
-          <h5><%= task.description %></h5>
+          <h5><%= task.description if task.completed %></h5>
       </div>
     <% end %>
     <% @todos.each do |task| %>
       <div class="col">
-          <h5><%= task.description %></h5>
+          <h5><%= task.description if !task.completed %></h5>
       </div>
     <% end %>
   </div>
