@@ -1,0 +1,18 @@
+<h2>INDEX</h2>
+
+<%= notice %>
+
+<% @todos.each do |task| %>
+  <div class="card" style="width: 22rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= task.description %></h5>
+      <%= link_to 'Listo', complete_todo_path(task), class: 'btn btn-success' %>
+      <%= link_to 'Show', todo_path(task), class: 'btn btn-warning' %>
+      <%= link_to 'Editar', edit_todo_path(task), class: 'btn btn-primary' %>
+      <%= link_to 'Eliminar', todo_path(task), method: :delete, class: 'btn btn-danger' %>
+    </div>
+  </div>
+<% end %>
+<br>
+<br>
+<%= link_to 'Crear nueva tarea', todos_new_path %>
