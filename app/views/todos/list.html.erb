@@ -1,24 +1,21 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h3>Pendientes</h3>
+      <h3>Listas</h3>
     </div>
     <div class="col">
-      <h3>Listas</h3>
+      <h3>Pendientes</h3>
     </div>
   </div>
 
-  <div class="row">
-    <% @todos.each do |task| %>
+  <% @todos.each do |task| %>
+    <div class="row">
       <div class="col">
           <h5><%= task.description if task.completed %></h5>
       </div>
-    <% end %>
-    <% @todos.each do |task| %>
       <div class="col">
-          <h5><%= task.description if !task.completed %></h5>
+        <h5><%= task.description if !task.completed %></h5>
       </div>
-    <% end %>
-  </div>
-
+    </div>
+  <% end %>
 </div>
