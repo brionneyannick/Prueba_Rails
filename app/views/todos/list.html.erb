@@ -9,21 +9,16 @@
   </div>
 
   <div class="row">
-    <div class="col">
-      <h3>Pendientes</h3>
-    </div>
-    <div class="col">
-      <h3>Listas</h3>
-    </div>
+    <% @todos.each do |task| %>
+      <div class="col">
+          <h5><%= task.description %></h5>
+      </div>
+    <% end %>
+    <% @todos.each do |task| %>
+      <div class="col">
+          <h5><%= task.description %></h5>
+      </div>
+    <% end %>
   </div>
 
 </div>
-
-<% @todos.each do |task| %>
-  <div class="card" style="width: 22rem;">
-    <div class="card-body">
-      <h5 class="card-title"><%= task.description %></h5>
-      
-    </div>
-  </div>
-<% end %>
