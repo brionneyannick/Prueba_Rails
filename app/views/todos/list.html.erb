@@ -18,3 +18,12 @@
   </div>
 
 </div>
+
+<% @todos.each do |task| %>
+  <div class="card" style="width: 22rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= task.description %></h5>
+      
+    </div>
+  </div>
+<% end %>
